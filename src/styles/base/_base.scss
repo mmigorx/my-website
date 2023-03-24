@@ -1,0 +1,144 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f8f9;
+  font-size: 1.6rem;
+  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+* {
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+main {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+p {
+  margin-top: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.container-box {
+  width: 100%;
+  max-width: 1441px;
+
+  @include respond(phone) {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    width: unset;
+    max-width: unset;
+  }
+
+  @include respond(tablet-port) {
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+    width: unset;
+    max-width: unset;
+  }
+
+  @include respond(tablet-land) {
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+    width: unset;
+    max-width: unset;
+  }
+  @include respond(desktop-big) {
+    padding-left: 6.4rem;
+    padding-right: 6.4rem;
+    width: unset;
+    max-width: unset;
+  }
+}
+
+.bolden {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.small-text {
+  color: var(--gray);
+  font-size: 1.3rem;
+}
+
+.header.scrollss {
+  box-shadow: 0 3px 6px var(--gray-800);
+}
+
+.underline {
+  position: relative;
+  z-index: 1;
+  margin-left: 1rem;
+
+  @include respond(phone) {
+    margin-left: 0.7rem;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: var(--primary);
+    bottom: 13%;
+    height: 14px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+
+    @include respond(phone) {
+      display: 16%;
+      height: 10px;
+    }
+
+    @include respond(tablet-port) {
+      bottom: 17%;
+      height: 10px;
+    }
+  }
+}

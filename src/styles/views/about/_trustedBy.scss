@@ -1,0 +1,69 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.trusted-by {
+  padding: 3.2rem 0;
+  margin-top: 6.4rem;
+  background-color: var(--gray);
+
+  @include respond(phone, tablet-port) {
+    padding: 3.2rem 4rem;
+  }
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+
+    @include respond(phone, tablet-port) {
+      flex-direction: column;
+      gap: 6.4rem;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+    &-text {
+      color: var(--black);
+      margin: 0;
+      font-size: 24px;
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-right: auto;
+
+      @include respond(phone, tablet-port, tablet-land) {
+        margin-right: 0;
+      }
+
+      img {
+        position: absolute;
+        bottom: -17px;
+        right: -10px;
+      }
+    }
+    &-companies {
+      display: flex;
+      flex-direction: row;
+      gap: 12rem;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10rem;
+      @include respond(phone, tablet-port, tablet-land) {
+        gap: 7rem;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+}

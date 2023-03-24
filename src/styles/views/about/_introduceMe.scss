@@ -1,0 +1,83 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.introduce-me {
+  padding-top: 6.4rem;
+
+  @include respond(phone) {
+    margin-top: unset;
+  }
+  @include respond(tablet-port, tablet-land) {
+    margin-top: 6rem;
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    @include respond(phone) {
+      padding-left: 16px;
+      padding-right: 16px;
+      width: unset;
+      max-width: unset;
+    }
+    @include respond(tablet-port) {
+      padding-left: 32px;
+      padding-right: 32px;
+      width: unset;
+      max-width: unset;
+    }
+    @include respond(tablet-land) {
+      padding-left: 64px;
+      padding-right: 64px;
+      width: unset;
+      max-width: unset;
+    }
+    @include respond(desktop-big) {
+      width: 100%;
+      max-width: 1280px;
+      padding: 0 1rem;
+    }
+    &-heading {
+      max-width: 800px;
+      text-align: center;
+    }
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-top: 3.2rem;
+
+      @include respond(phone, tablet-port) {
+        gap: 3.2rem;
+      }
+
+      &-item {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        align-items: center;
+        width: 650px;
+
+        @include respond(phone, tablet-port) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          text-align: center;
+          gap: 2rem;
+        }
+
+        &-text {
+          margin-top: 0 !important;
+          max-width: 600px;
+        }
+      }
+    }
+  }
+}

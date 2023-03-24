@@ -1,0 +1,125 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.heading-primary {
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 120%;
+  max-width: 100%;
+  word-break: break-word;
+
+  @include respond(phone, tablet-port) {
+    font-size: 32px;
+  }
+  @include respond(tablet-land) {
+    font-size: 42px;
+  }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
+}
+
+.heading-big {
+  font-size: 64px;
+  width: 100%;
+  line-height: 100%;
+  font-weight: 600;
+
+  @include respond(phone) {
+    font-size: 28px;
+  }
+  @include respond(tablet-port) {
+    font-size: 48px;
+  }
+  @include respond(tablet-land) {
+    font-size: 56px;
+  }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
+}
+
+.heading-secondary {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 120%;
+
+  @include respond(phone) {
+    font-size: 32px;
+  }
+  @include respond(tablet-port) {
+    font-size: 36px;
+  }
+  @include respond(tablet-land) {
+    font-size: 42px;
+    margin-top: 0px;
+    margin-bottom: 16px;
+  }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
+}
+
+.heading-third {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%;
+
+  @include respond(phone) {
+    font-size: 28px;
+  }
+  @include respond(tablet-port, tablet-land) {
+    font-size: 32px;
+  }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
+}
+
+.heading-references {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
+
+  @include respond(phone) {
+    font-size: 24px;
+  }
+  @include respond(tablet-port, tablet-land) {
+    font-size: 28px;
+  }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
+}
+
+.heading-fourth {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
+
+  @include respond(phone) {
+    font-size: 24px;
+  }
+  @include respond(tablet-port, tablet-land) {
+    font-size: 28px;
+  }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
+}
+
+.heading-fifth {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 29px;
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
+}

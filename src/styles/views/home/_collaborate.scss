@@ -1,0 +1,85 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.collaborate {
+  margin: 6.4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  @include respond(phone, tablet-port, tablet-land) {
+    width: unset;
+  }
+  &-wrapper {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+
+    @include respond(phone) {
+      padding: 6.4rem 2rem;
+      width: unset;
+    }
+    @include respond(ablet-port, tablet-land) {
+      width: unset;
+    }
+
+    &-heading {
+      max-width: 1160px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: block;
+
+      @include respond(phone, tablet-port, tablet-land) {
+        text-align: center;
+        word-break: break-word;
+      }
+    }
+
+    &-text {
+      max-width: 979px;
+      width: 100%;
+      text-align: center;
+
+      @include respond(phone, tablet-port) {
+        text-align: center;
+        word-break: break-word;
+      }
+    }
+
+    &-lines-img {
+      position: absolute;
+      right: 9rem;
+      top: 7rem;
+
+      @include respond(phone, tablet-port, tablet-land) {
+        display: none;
+      }
+    }
+    &-arrow-img {
+      position: absolute;
+      bottom: -9rem;
+      right: 0;
+
+      @include respond(phone, tablet-port, tablet-land) {
+        bottom: -8rem;
+      }
+
+      img {
+        object-fit: cover;
+        @include respond(phone, tablet-port, tablet-land) {
+          width: 99px;
+          height: auto;
+        }
+      }
+    }
+  }
+}

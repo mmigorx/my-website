@@ -1,0 +1,47 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.paragraph-primary {
+  font-size: 18px;
+  color: var(--gray-200);
+  word-break: break-word;
+  font-weight: 400;
+  margin: 1.6rem 0 0;
+
+  @include respond(phone) {
+    font-size: 18px;
+  }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
+}
+
+.paragraph-secondary {
+  font-size: 1.8rem;
+  color: var(--gray-200);
+  word-break: break-word;
+
+  @include respond(phone) {
+    padding: 0;
+    text-align: center;
+  }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
+}
+
+.paragraph-third {
+  font-size: 1.8rem;
+  color: var(var(--gray-200));
+  word-break: break-word;
+
+  @include respond(phone) {
+    padding: 0;
+  }
+  &::selection {
+    color: var(--black);
+    background-color: var(--primary);
+  }
+}

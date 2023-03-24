@@ -1,0 +1,85 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.implementation-process {
+  padding-top: 6.4rem;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+
+  @include respond(phone, tablet-port, tablet-land) {
+    width: unset;
+    margin: 11rem 0 4rem 0;
+    padding-top: 0;
+  }
+
+  &-top {
+    &-text {
+      max-width: 742px;
+    }
+    &-heading {
+      max-width: 899px;
+    }
+  }
+  &-list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 8rem 0;
+    padding-top: 6.4rem;
+
+    @include respond(phone, tablet-port, tablet-land) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4.5rem 0;
+    }
+    &-item {
+      width: 50%;
+      @include respond(phone, tablet-port, tablet-land) {
+        width: 100%;
+      }
+      &-top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+        @include respond(phone, tablet-port, tablet-land) {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2rem;
+        }
+
+        &-img {
+          img {
+            width: 54px;
+            height: 54px;
+            object-fit: cover;
+            @include respond(phone, tablet-port, tablet-land) {
+              width: 50px;
+              height: 50px;
+            }
+          }
+        }
+
+        &-heading {
+          width: 729px;
+        }
+      }
+      &-bottom {
+        max-width: 664px;
+        width: 100%;
+
+        &-text {
+          margin-top: 24px;
+
+          @include respond(phone, tablet-port, tablet-land) {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

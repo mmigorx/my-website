@@ -1,0 +1,84 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.custom-select {
+  display: block;
+  margin: 1.6rem;
+  transition: 0.2s all ease-in-out;
+  color: var(--black);
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  border: 0;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  width: 80px;
+  border-radius: 3px;
+
+  @include respond(phone) {
+    margin: 0;
+  }
+
+  .selected-option {
+    cursor: pointer;
+    background: var(--white);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row-reverse;
+    justify-content: center;
+    border-radius: 3px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid black;
+      transform: rotate(0deg);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &.is-open::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  .options {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    width: 80px;
+    border-radius: 3px;
+    box-shadow: 0 4px 12px 5px rgba(1, 5, 14, 0.05);
+
+    @include respond(phone) {
+      top: 100%;
+    }
+
+    .option {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+      width: auto;
+      transition: 0.3s all ease-in-out;
+      padding: 0.5rem 2rem;
+      @include respond(phone) {
+        padding: 0;
+      }
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+}
